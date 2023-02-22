@@ -1,0 +1,44 @@
+<section class="h-100 h-custom" style="background-color: #ffffff;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-8 col-xl-6">
+                <div class="card rounded-3">
+                    <img src="https://images.ctfassets.net/3s5io6mnxfqz/5RBJS7c5SK0SCCDGznyPW9/ea0a43c2cbfc20a960c4fe46a78ad27b/AdobeStock_236121496.jpeg"
+                        class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+                        alt="Sample photo">
+                    <div class="card-body p-4 p-md-5">
+                        <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Edit account</h3>
+
+                        <form #userEditForm="ngForm" class="px-md-2">
+
+                            <div class="form-outline mb-4">
+                                <input class="formGroup" name="firstName" #firstName="ngModel" [(ngModel)]="userService.formData.firstName"
+                                type="text" id="form3Example1q" class="form-control" placeholder="First Name" />
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input class="formGroup" name="lastName" #lastName="ngModel" [(ngModel)]="userService.formData.lastName"
+                                type="text" id="form3Example1q" class="form-control" placeholder="Last Name" />
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input class="formGroup" name="username" #username="ngModel" [(ngModel)]="userService.formData.username"
+                                type="text" id="form3Example1q" class="form-control" placeholder="Username" />
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input class="formGroup" name="email" #email="ngModel" [(ngModel)]="userService.formData.email"
+                                type="text" id="form3Example1q" class="form-control" placeholder="Email" />
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input class="formGroup" name="address" #address="ngModel" [(ngModel)]="userService.formData.address"
+                                type="text" id="form3Example1q" class="form-control" placeholder="Address" />
+                            </div>
+
+                            <button (click)="onSubmit(userEditForm)" type="submit" class="btn btn-success btn-sm mb-1">Submit</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

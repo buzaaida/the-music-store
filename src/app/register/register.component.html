@@ -1,0 +1,151 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/home">THE MUSIC STORE</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products">PRODUCTS</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+        </li>
+        <li class="nav-item">
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+        </li>
+        <li class="nav-item">
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/sign-in">SIGN IN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/register">REGISTER</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/shopping-cart">CART</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/account">PROFILE</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Navigation -->
+
+<section class="vh-100">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6 text-black">
+
+        <div class="px-5 ms-xl-4">
+          <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+          <!-- <span class="h1 fw-bold mb-0">Logo</span> -->
+        </div>
+
+        <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+
+          <form #registerForm="ngForm" style="width: 23rem;">
+
+            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">REGISTER</h3>
+            <!-- <div class="form-outline mb-4 formGroup">
+                
+                <input clas="formGroup" [value]="userService.formData.userId"  name="userId" 
+                type="hidden" id="0" class="form-control form-control-lg"/>
+                
+              </div> -->
+
+            <div class="form-outline mb-4 formGroup">
+
+              <input clas="formGroup" name="email" #email="ngModel" [(ngModel)]="userService.formData.email"
+                type="email" placeholder="Email Address" id="1" class="form-control form-control-lg" required email />
+              <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid password.</span>
+
+            </div>
+
+            <div class="form-outline mb-4 formGroup">
+
+              <input clas="formGroup" name="password" #password="ngModel" [(ngModel)]="userService.formData.password"
+                type="password" placeholder="Password" id="2" class="form-control form-control-lg" required
+                minlength="7" />
+              <span class="help-block" *ngIf="!password.valid && password.touched">Your password must contain at least 7
+                characters.</span>
+
+            </div>
+
+            <div class="form-outline mb-4 formGroup">
+
+              <input clas="formGroup" name="username" #username="ngModel" [(ngModel)]="userService.formData.username"
+                type="text" placeholder="Username" id="3" class="form-control form-control-lg" required />
+              <span class="help-block" *ngIf="!username.valid && username.touched">Please enter a username.</span>
+
+            </div>
+
+            <div class="form-outline mb-4 formGroup formGroup">
+
+              <input clas="formGroup" name="firstName" #firstName="ngModel" [(ngModel)]="userService.formData.firstName"
+                type="text" placeholder="First Name" id="4" class="form-control form-control-lg" required />
+              <span class="help-block" *ngIf="!firstName.valid && firstName.touched">Please enter your first
+                name.</span>
+
+            </div>
+
+            <div class="form-outline mb-4 formGroup">
+
+              <input clas="formGroup" name="lastName" #lastName="ngModel" [(ngModel)]="userService.formData.lastName"
+                type="text" placeholder="Last Name" id="5" class="form-control form-control-lg" required />
+              <span class="help-block" *ngIf="!lastName.valid && lastName.touched">Please enter your last name.</span>
+
+            </div>
+
+            <div class="form-outline mb-4 formGroup">
+
+              <input clas="formGroup" name="address" #address="ngModel" [(ngModel)]="userService.formData.address"
+                type="text" placeholder="Address" id="6" class="form-control form-control-lg" required />
+              <span class="help-block" *ngIf="!address.valid && address.touched">Please enter your address.</span>
+
+            </div>
+
+            <!-- <div class="form-outline mb-4 formGroup">
+                
+                <input clas="formGroup" [value]="userService.formData.role"  name="role" 
+                type="hidden" id="7" class="form-control form-control-lg"/>
+                
+              </div> -->
+
+
+
+            <div class="pt-1 mb-4 formGroup">
+              <button class="btn btn-dark btn-sm btn-block" type="submit" [disabled]="!registerForm.valid"
+                (click)="onSubmit(registerForm)">Register</button>
+            </div>
+
+            <!-- <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p> -->
+            <!--<p>Don't have an account? <a routerLink="register" style="color: black">Register here!</a></p>-->
+
+          </form>
+
+        </div>
+
+      </div>
+      <div class="col-sm-6 px-0 d-none d-sm-block">
+        <img src="https://www.oscarschmidt.com/wp-content/uploads/2019/05/OSI_OG10CEWH_BL_100317-20.jpg"
+          alt="register image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+<section class="h-100 h-custom" style="background-color: #ffffff;">
+	<div class="container py-5 h-100">
+	  <div class="row d-flex justify-content-center align-items-center h-100">
+		<div class="col-lg-8 col-xl-6">
+		  <div class="card rounded-3">
+			<img src="https://images.ctfassets.net/3s5io6mnxfqz/5RBJS7c5SK0SCCDGznyPW9/ea0a43c2cbfc20a960c4fe46a78ad27b/AdobeStock_236121496.jpeg"
+			  class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+			  alt="Sample photo">
+			<div class="card-body p-4 p-md-5">
+			  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Edit product details</h3>
+  
+			  <form #productEditForm="ngForm" class="px-md-2">
+  
+				<div class="form-outline mb-4">
+				  <input class="formGroup" name="name" #name="ngModel" [(ngModel)]="productService.formData.name"
+				   type="text" id="form3Example1q" class="form-control" placeholder="Name"/>
+				</div>
+				<div class="form-outline mb-4">
+					<input class="formGroup" name="category" #category="ngModel" [(ngModel)]="productService.formData.category"
+					type="text" id="form3Example1q" class="form-control" placeholder="Category"/>
+				  </div>
+				  <div class="form-outline mb-4">
+					<input class="formGroup" name="brand" #brand="ngModel" [(ngModel)]="productService.formData.brand"
+					type="text" id="form3Example1q" class="form-control" placeholder="Brand"/>
+				  </div>
+				  <div class="form-outline mb-4">
+					<input class="formGroup" name="color" #color="ngModel" [(ngModel)]="productService.formData.color"
+					type="text" id="form3Example1q" class="form-control" placeholder="Color"/>
+				  </div>
+				  <div class="form-outline mb-4">
+					<input class="formGroup" name="popularity" #popularity="ngModel" [(ngModel)]="productService.formData.popularity"
+					type="text" id="form3Example1q" class="form-control" placeholder="Popularity"/>
+				  </div>
+				  <div class="form-outline mb-4">
+					<input class="formGroup" name="description" #description="ngModel" [(ngModel)]="productService.formData.description"
+					type="text" id="form3Example1q" class="form-control" placeholder="Description"/>
+				  </div>
+				  <div class="form-outline mb-4">
+					<input class="formGroup" name="available" #available="ngModel" [(ngModel)]="productService.formData.available"
+					type="text" id="form3Example1q" class="form-control" placeholder="Available"/>
+				  </div>
+				  <div class="form-outline mb-4">
+					<input class="formGroup" name="price" #price="ngModel" [(ngModel)]="productService.formData.price"
+					type="text" id="form3Example1q" class="form-control" placeholder="Price"/>
+				  </div>
+  
+				<button (click)="onSubmit(productEditForm)" type="submit" class="btn btn-success btn-sm mb-1">Submit</button>
+  
+			  </form>
+  
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>

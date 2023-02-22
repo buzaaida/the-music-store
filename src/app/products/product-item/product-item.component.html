@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+      <div class="card list-group shadow">
+        <img class="card-img"
+          src="https://sc1.musik-produktiv.com/pic-010124381xxl/fender-american-professional-ii-stratocaster-mn-blk.jpg"
+          alt="Vans">
+        <div class="card-img-overlay d-flex justify-content-end">
+          <a href="#" class="card-link text-danger like">
+            <i class="fas fa-heart"></i>
+          </a>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">AMERICAN PROFESSIONAL II STRATOCASTER {{productItem.name}}</h4>
+          <h6 class="card-subtitle mb-2 text-muted">Brand: FENDER</h6>
+          <p class="card-text">Three V-Mod II single-coil Stratocaster pickups
+            Upgraded 2-Point Tremolo with Cold-Rolled Steel Block
+            Deep "C”-shaped neck profile with rolled fingerboard edges
+            Bone nut; 22 narrow-tall frets for easy bending
+            Treble bleed circuit maintains highs when reducing volume
+            Includes Deluxe Molded hardshell case</p>
+          <div class="options d-flex flex-fill">
+            <select class="custom-select mr-1">
+              <option selected>Color</option>
+              <option value="1">White</option>
+              <option value="2">Black</option>
+              <option value="3">Red</option>
+            </select>
+            <select class="custom-select ml-1" style="margin-left: 10px;">
+              <option selected>Quantity</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+          <div>
+            <div class="price text-dark">
+              <h5 class="mt-4">$2,512.99</h5>
+            </div>
+            <br>
+
+            <button type="button" class="btn btn-dark btn-sm">Add to cart</button>
+            <button (click)="onClickGoToCheckout()" type="button" class="btn btn-success btn-sm" style="margin-left: 10px">Buy now</button>
+            <button (click)="onClickGoToProductEdit()" type="button" class="btn btn-outline-dark btn-sm" style="margin-left: 30px;">Edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

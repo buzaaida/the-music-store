@@ -1,0 +1,103 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/home">THE MUSIC STORE</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products">PRODUCTS</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+        </li>
+        <li class="nav-item">
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+        </li>
+        <li class="nav-item">
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/sign-in">SIGN IN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/register">REGISTER</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/shopping-cart">CART</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/account">PROFILE</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Navigation -->
+
+<div class="container mt-5 mb-5">
+  <div class="d-flex justify-content-center row">
+    <div class="col-md-8">
+      <div class="p-2">
+        <h4>SHOPPING CART</h4>
+        <div class="d-flex flex-row align-items-center pull-right "><i class="fa fa-angle-down"></i></div>
+      </div>
+      <div class="list-group shadow">
+        <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">
+          <div class="mr-1"><img class="rounded"
+              src="https://sc1.musik-produktiv.com/pic-010124381xxl/fender-american-professional-ii-stratocaster-mn-blk.jpg"
+              width="70"></div>
+          <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">AMERICAN
+              PROFESSIONAL II STRATOCASTER</span>
+            <div class="d-flex flex-row product-desc">
+
+            </div>
+          </div>
+          <div class="d-flex flex-row align-items-center qty"><i class="fa fa-minus text-danger"></i>
+            <h5 class="text-grey mt-1 mr-1 ml-1">1</h5><i class="fa fa-plus text-success"></i>
+          </div>
+          <div>
+            <h5 class="text-grey">$2,512.99</h5>
+          </div>
+
+          <div class="d-flex align-items-center"><i class="fa fa-trash mb-1 text-danger"></i></div>
+        </div>
+        <br>
+        <div *ngFor="let item of items" class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">
+          <div class="mr-1"><img class="rounded"
+              src=""
+              width="70"></div>
+          <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">{{item.name}}</span>
+            <div class="d-flex flex-row product-desc">
+
+            </div>
+          </div>
+          <div class="d-flex flex-row align-items-center qty"><i class="fa fa-minus text-danger"></i>
+            <h5 class="text-grey mt-1 mr-1 ml-1">1</h5><i class="fa fa-plus text-success"></i>
+          </div>
+          <div>
+            <h5 class="text-grey">{{ item.price | currency }}</h5>
+          </div>
+
+          <div class="d-flex align-items-center"><i class="fa fa-trash mb-1 text-danger"></i></div>
+        </div>
+        <!-- <div class="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded"><input type="text" class="form-control border-0 gift-card" placeholder="discount code"><button class="btn btn-outline-success btn-sm ml-2" type="button">Apply</button></div> -->
+        <div class="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded"><button
+            (click)="onClickGoToCheckout()" class="btn btn-success btn-block btn-lg ml-2 pay-button"
+            style="margin-left: 10px; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+            type="button">Proceed to pay</button></div>
+      </div>
+    </div>
+  </div>
+</div>

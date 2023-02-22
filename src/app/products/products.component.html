@@ -1,0 +1,178 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/home">THE MUSIC STORE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/products">PRODUCTS</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+          </li>
+          <li class="nav-item">
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+          </li>
+          <li class="nav-item">
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item" >
+            <a *ngIf="isUserAuthenticated()" class="nav-link" (click)="logOut()">SIGN OUT</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="!isUserAuthenticated()" class="nav-link" routerLink="/sign-in">SIGN IN</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="!isUserAuthenticated()" class="nav-link" routerLink="/register">REGISTER</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/shopping-cart">CART</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/account">PROFILE</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navigation -->
+
+  
+
+<div class="container py-5">
+    <div class="row text-center text-white mb-5">
+        <div class="col-lg-7 mx-auto">
+          <h5 class="display-4" style="color: black;">INSTRUMENTS</h5>
+        </div>
+    </div>
+    <div class="row" class="list-group shadow" style="padding: 50px;">
+        <div class="col-lg-8 mx-auto">
+            <!-- list group-->
+            <ul>
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">AMERICAN PROFESSIONAL II STRATOCASTER <button type="button" class="btn btn-outline-dark btn-sm" style="margin-left: 10px" (click)="onClickDetails()">Details</button><button (click)="onClickGoToProductEdit()" type="button" class="btn btn-outline-dark btn-sm" style="margin-left: 10px;">Edit</button></h5>
+                            <p class="font-italic text-muted mb-0 small">brand</p>
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h6 class="font-weight-bold my-2">price</h6>
+                                <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
+                                </ul>
+                            </div>
+                        </div><img src="https://sc1.musik-produktiv.com/pic-010124381xxl/fender-american-professional-ii-stratocaster-mn-blk.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div> <!-- End -->
+                    <button type="button" class="btn btn-dark" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Add to cart</button>
+                    <button (click)="onClickGoToCheckout()" type="button" class="btn btn-success" style="margin-left: 10px; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Buy now</button>
+                </li> <!-- End -->
+                <br>
+                <br>
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">MASTERWORKS MAPLE <button type="button" class="btn btn-outline-dark btn-sm" style="margin-left: 10px">Details</button></h5>
+                            <p class="font-italic text-muted mb-0 small">brand</p>
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h6 class="font-weight-bold my-2">price</h6>
+                                <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                </ul>
+                            </div>
+                        </div><img src="https://cf.shopee.co.th/file/5c5396ddf61dade76f2c0bdbc529fed2" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div> <!-- End -->
+                    <button type="button" class="btn btn-dark" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Add to cart</button>
+                    <button type="button" class="btn btn-success" style="margin-left: 10px; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Buy now</button>
+                </li> <!-- End -->
+                <br>
+                <br>
+                <!-- list group item -->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">SX SERIES <button type="button" class="btn btn-outline-dark btn-sm" style="margin-left: 10px">Details</button></h5>
+                            <p class="font-italic text-muted mb-0 small">brand</p>
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h6 class="font-weight-bold my-2">price</h6>
+                                <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
+                                </ul>
+                            </div>
+                        </div><img src="https://www.yamaha.com/us/pianos/images/S7x-42b63859.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div> <!-- End -->
+                    <button type="button" class="btn btn-dark" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Add to cart</button>
+                    <button type="button" class="btn btn-success" style="margin-left: 10px; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Buy now</button>
+                </li> <!-- End -->
+                <br>
+                <br>
+            </ul> <!-- End -->
+
+            <br>
+            <br>
+            <ul *ngFor="let product of allProducts">
+              <!-- list group item-->
+              <li class="list-group-item">
+                  <!-- Custom content-->
+                  <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                      <div class="media-body order-2 order-lg-1">
+                          <h5 class="mt-0 font-weight-bold mb-2">{{product.name}} <button type="button" class="btn btn-outline-dark btn-sm" style="margin-left: 10px" (click)="onClickDetails()">Details</button></h5>
+                          <p class="font-italic text-muted mb-0 small">{{product.brand}}</p>
+                          <div class="d-flex align-items-center justify-content-between mt-1">
+                              <h6 class="font-weight-bold my-2">{{product.price}}</h6>
+                              <ul class="list-inline small">
+                                  <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                  <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                  <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                  <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                  <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
+                              </ul>
+                          </div>
+                      </div><img src="" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                  </div> <!-- End -->
+                  <button (click)="addToCart(product)" type="button" class="btn btn-dark" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Add to cart</button>
+                  <button (click)="onClickGoToCheckout()" type="button" class="btn btn-success" style="margin-left: 10px; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Buy now</button>
+              </li> <!-- End -->
+              </ul>
+
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">&raquo;</a>
+              </div>
+        </div>
+    </div>
+    
+</div>
+<router-outlet></router-outlet>
+
